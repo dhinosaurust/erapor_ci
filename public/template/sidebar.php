@@ -1,4 +1,4 @@
-<aside id="sideNav" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+<aside id="sideNav" class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto fw-semibold text-white text-decoration-none text-uppercase">
         <img src="assets/img/logo_pemkot.png" alt="logo-pemkot" style="width: 60px;">
         sekretariat
@@ -6,19 +6,19 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-        <a href="#" class="nav-link text-white active" aria-current="page">
+        <a href="/" class="nav-link p-3 text-white <?php echo $_SERVER['REQUEST_URI'] == '/' ? 'active' : '' ;?>" aria-current="page">
             <i class="bi bi-house-door me-2"></i>
             <span class="d-none d-sm-inline">Home</span>
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-white p-3 mt-3" aria-current="page">
+        <a href="list-pegawai" class="nav-link p-3 mt-3 text-white <?php echo $_SERVER['REQUEST_URI'] == '/list-pegawai' ? 'active' : '' ;?>" aria-current="page">
             <i class="bi bi-person-circle me-2"></i>
             <span class="d-none d-sm-inline">List Pegawai</span>
         </a>
     </li>
     </ul>
-    <hr>
+    <hr class="text-white">
     <div class="dropdown">
     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="assets/img/no-dp-mood-off_9.jpg" alt="" width="32" height="32" class="rounded-circle me-2">

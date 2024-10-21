@@ -1,9 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+:root{
+    --bs-dark: #161616;
+
+    --bg-primary-subtle: rgb(3, 22, 51);
+    --txt-primary-emphasis: rgb(110, 168, 254);
+}
 *{
     font-family: 'Poppins', serif;
 }
 main nav{
     margin-top: 5rem;
+}
+.list-pegawai-tbl th,
+.list-pegawai-tbl td{
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+aside,
+footer{
+    background-color: #161616;
+}
+footer .left-footer{
+    font-size: 12px;
+    font-weight: 300;
+}
+footer .row .list-group-item{
+    background-color: var(--bs-dark) !important;
+    border-bottom: solid 0.25px var(--bs-gray-600) !important;
+}
+.fixed-top{
+    left: unset;
+    right: unset;
 }
 .sidebar-toggled{
     width: 0 !important;
