@@ -5,7 +5,13 @@
         </button>
         <div class="container-fluid">
             <a class="navbar-brand text-capitalize" href="#">
-                home
+                <?php
+                    if($_SERVER['REQUEST_URI'] == '/list-pegawai'){
+                        echo 'list pegawai';
+                    } else {
+                        echo 'home';
+                    }
+                ?>
             </a>
             
         </div>

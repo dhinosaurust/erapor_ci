@@ -3,7 +3,7 @@
         <img src="assets/img/logo_pemkot.png" alt="logo-pemkot" style="width: 60px;">
         sekretariat
     </a>
-    <hr>
+    <hr class="text-white">
     <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
         <a href="/" class="nav-link p-3 text-white <?php echo $_SERVER['REQUEST_URI'] == '/' ? 'active' : '' ;?>" aria-current="page">

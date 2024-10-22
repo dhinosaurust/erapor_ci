@@ -9,7 +9,7 @@ class AddUser extends Migration
     public function up()
     {
         $this->forge->addField([
-            'user_id' => [
+            'id' => [
                 'type' => 'INT',
                 'constraint' => '11',
                 'unsigned'       => true,
@@ -28,12 +28,13 @@ class AddUser extends Migration
                 'constraint' => '100'
             ],
         ]);
-        $this->forge->addKey('user_id', true);
+        $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('pegawai_id', 'tbl_pegawai', 'id');
         $this->forge->createTable('tbl_user');
     }
 
     public function down()
     {
-        //
+        $this->forge->dropTable('tbl_user');
     }
 }
