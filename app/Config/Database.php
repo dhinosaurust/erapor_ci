@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => 'root',
-        'password'     => 'admin123',
+        'password'     => '',
         'database'     => 'erapor_db',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
