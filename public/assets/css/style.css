@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 :root{
     --bs-dark: #161616;
+    --bg-dark-gradient: linear-gradient(195deg, #42424a 0%, #191919 100%); /*background image*/
 
     --bg-primary-subtle: rgb(3, 22, 51);
     --txt-primary-emphasis: rgb(110, 168, 254);

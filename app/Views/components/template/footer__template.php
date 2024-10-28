@@ -3,7 +3,7 @@
         <ul class="list-group col-4 m-3 list-group-flush">
             <li class="list-group-item p-3 text-white"><a href="#" class="text-white text-decoration-none"><i class="bi bi-arrow-up-right-circle-fill me-3"></i>About</li></a>
             <li class="list-group-item p-3 text-white"><a href="#" class="text-white text-decoration-none"><i class="bi bi-arrow-up-right-circle-fill me-3"></i>Gedung Diklat</li></a>
-            <li class="list-group-item p-3 text-white"><a href="#" class="text-white text-decoration-none"><i class="bi bi-arrow-up-right-circle-fill me-3"></i>ePerpus</li></a>
+            <li class="list-group-item p-3 text-white"><a href="#" class="text-white text-decoration-none"><i class="bi bi-arrow-up-right-circle-fill me-3"></i>Artikel</li></a>
             <li class="list-group-item p-3 text-white"><a href="#" class="text-white text-decoration-none"><i class="bi bi-arrow-up-right-circle-fill me-3"></i>Contact</li></a>
             <p class="left-footer text-white mt-3">BKPSDM <span id="gkPenting1"></span></p>
         </ul>

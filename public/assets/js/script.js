@@ -43,7 +43,7 @@ async function showData(){
     }
 }
 
-showData();
+// showData();
 
 
 btnSideNav.addEventListener('click', () => {

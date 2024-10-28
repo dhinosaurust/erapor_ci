@@ -45,7 +45,7 @@ class CreatePegawaiMigration extends Migration
                 'default' => 'L'
             ],
             'tgl_lahir' => [
-                'type' => 'DATETIME',
+                'type' => 'DATE',
             ],
             'tk_pendidikan' => [
                 'type' => 'VARCHAR',
