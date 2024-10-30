@@ -24,10 +24,6 @@ class EmployeeModel extends Model
     
     public function search($keyword)
     {
-        // $builder = $this->table('tbl_pegawai');
-        // $builder->like('nip_nik', $keyword);
-        // return $builder;
-
         return $this->table('tbl_pegawai')->like('nip_nik', $keyword)->orLike('nama', $keyword);
     }
 
@@ -36,4 +32,20 @@ class EmployeeModel extends Model
 
         return $this->table('tbl_pegawai')->where('kategori', $category);
     }
+    
+    public function countByAgeCategory($category, $gender, $minAge, $maxAge = null)
+    {
+        $this->where('jenis_kelamin', $gender)
+             ->where('kategori', $category)
+             ->where("TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) >= $minAge");
+    
+        if ($maxAge !== null) {
+            $this->where("TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE()) <= $maxAge")
+                 ->where('kategori', $category);
+        }
+    
+        return $this->countAllResults();
+    }
+    
+
 }

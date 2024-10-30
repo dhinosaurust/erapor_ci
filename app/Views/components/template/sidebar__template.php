@@ -7,8 +7,8 @@
     <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
         <a href="/" class="nav-link p-3 text-white <?= $_SERVER['REQUEST_URI'] == '/' ? 'active' : '' ;?>" aria-current="page">
-            <i class="bi bi-house-door me-2"></i>
-            <span class="d-none d-sm-inline">Home</span>
+            <i class="bi bi-speedometer me-2"></i>
+            <span class="d-none d-sm-inline">Dashboard</span>
         </a>
     </li>
     <li class="nav-item">

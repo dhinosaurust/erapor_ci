@@ -35,7 +35,7 @@
                     <div class="input-group">
                         <input type="text" name="keyword" class="form-control" placeholder="Cari berdasarkan Nama dan NIP" value="<?= isset($_SESSION['keyword']) ? $_SESSION['keyword'] : '' ?>">
                         <?php if(isset($_SESSION['keyword'])) : ?>
-                            <a href="#" class="btn btn-secondary"  onclick="location.href='/list-pegawai/clear'"><i class="bi bi-arrow-clockwise"></i></a>
+                            <a href="#" class="btn btn-secondary"  onclick="location.href='/list-pegawai/clearSearch'"><i class="bi bi-arrow-clockwise"></i></a>
                         <?php else : ?>
                             <button class="btn btn-primary" type="submit" id="btn_search"><i class="bi bi-search"></i></button>
                         <?php endif; ?>
@@ -49,7 +49,7 @@
         <hr class="mt-1">
         <div class='d-flex justify-content-between px-3 mb-3 mx-2'>
             <?= "<div>" . "Filter berdasarkan kategori :  " . "<span class='badge rounded-pill text-uppercase text-bg-primary'>" .  $_SESSION['category'] . "</span>" . "</div>" ?>
-            <button type="submit" onclick="location.href='/list-pegawai/clear'" class="btn text-danger p-0 fs-5 bi bi-x-circle-fill">
+            <button type="submit" onclick="location.href='/list-pegawai/clearFilter'" class="btn text-danger p-0 fs-5 bi bi-x-circle-fill">
         </div>
         
         <?php endif; ?>
@@ -57,8 +57,8 @@
 
     <div class="card">
         <div class="card-body p-0 table-responsive">
-            <table class="list-pegawai-tbl table table-hover">
-                <thead class="border-top text-primary" style="background-color: #eaf2ff;">
+            <table class="list-pegawai-tbl table table-bordered table-hover" style="border-color: #f0f2f5;">
+                <thead class="border-bottom border-3 fw-bold text-white shadow-sm" style="background: linear-gradient(90deg, rgba(20,136,204,1) 0%, rgba(37,73,185,1) 45%, rgba(43,50,178,1) 100%);">
                     <tr style="vertical-align: middle;">
                         <th>No</th>
                         <th>Nama</th>

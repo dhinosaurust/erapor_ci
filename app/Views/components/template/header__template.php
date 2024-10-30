@@ -6,10 +6,10 @@
         <div class="container-fluid">
             <a class="navbar-brand text-capitalize" href="#">
                 <?php
-                    if($_SERVER['REQUEST_URI'] == '/list-pegawai'){
+                    if(strpos($_SERVER['REQUEST_URI'], '/list-pegawai') === 0){
                         echo 'list pegawai';
                     } else {
-                        echo 'home';
+                        echo 'dashboard';
                     }
                 ?>
             </a>

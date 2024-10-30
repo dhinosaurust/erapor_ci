@@ -5,10 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'HomeController::index');
+$routes->add('/', 'HomeController::index');
+// $routes->add('/test', 'HomeController::countPegawaiByAgeRanges');
 
 $routes->add('/list-pegawai', 'ListPegawaiController::listEmployee');
-$routes->add('/list-pegawai/clear', 'ListPegawaiController::clearFilter');
+$routes->add('/list-pegawai/clearFilter', 'ListPegawaiController::clearFilter');
+$routes->add('/list-pegawai/clearSearch', 'ListPegawaiController::clearSearch');
 
 $routes->group('logout', function ($routes) {
     $routes->get('/', 'LogoutController::index');

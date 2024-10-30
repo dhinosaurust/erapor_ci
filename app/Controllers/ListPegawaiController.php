@@ -54,21 +54,30 @@ class ListPegawaiController extends BaseController
             'pageEmployee' => $pageEmployee
         ];
 
-        // if (!$this->isLoggedIn()) {
-        //     return redirect()->to('/login');
-        // }
+        if (!$this->isLoggedIn()) {
+            return redirect()->to('/login');
+        }
 
         return view('list_pegawai', $data);
     }
 
     public function clearFilter()
     {
-        $filter = [
-            'category',
-            'keyword'
-        ];
 
-        $this->session->remove($filter);
+        if($this->session->has('category')) {
+            $this->session->remove('category');
+
+        }  
+
+        return redirect()->to('/list-pegawai');
+    }
+
+    public function clearSearch(){
+        
+        if($this->session->has('keyword')){
+            $this->session->remove('keyword');
+
+        }
 
         return redirect()->to('/list-pegawai');
     }
