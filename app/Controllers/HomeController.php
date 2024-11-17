@@ -10,6 +10,7 @@ class HomeController extends BaseController
 
     public function __construct()
     {
+        $this->userModel = new UserModel();
         $this->employeeModel = new EmployeeModel();
         $this->countPNS = $this->countPNSbyAge(); 
         $this->countPPPK = $this->countPPPKbyAge(); 

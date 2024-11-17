@@ -3,15 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\EmployeeModel;
 
 class LoginController extends BaseController
 {
-
-    protected $model;
+    protected $userModel; 
 
     public function __construct()
     {
-        $this->model = new UserModel();
+        $this->userModel = new UserModel();
+        $this->employeeModel = new EmployeeModel();
         $this->helpers = ['form', 'url'];
     }
 
@@ -49,7 +50,7 @@ class LoginController extends BaseController
 
         $credentials = ['username' => $username];
 
-        $user =  $this->model->where($credentials)->first();
+        $user =  $this->userModel->where($credentials)->first();
         
         if (!$user) {
             session()->setFlashdata('error', 'Username atau Password Anda Salah.');

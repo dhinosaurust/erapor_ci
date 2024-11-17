@@ -12,6 +12,12 @@ $routes->add('/list-pegawai', 'ListPegawaiController::listEmployee');
 $routes->add('/list-pegawai/clearFilter', 'ListPegawaiController::clearFilter');
 $routes->add('/list-pegawai/clearSearch', 'ListPegawaiController::clearSearch');
 
+$routes->add('/kuesioner', 'KuesionerController::index');
+$routes->add('/penilaian_kinerja', 'PenilaianKinerja::index');
+
+$routes->add('/hasil-penilaian', 'HasilPenilaianController::index');
+
+
 $routes->group('logout', function ($routes) {
     $routes->get('/', 'LogoutController::index');
 });

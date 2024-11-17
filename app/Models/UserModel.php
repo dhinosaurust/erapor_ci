@@ -49,6 +49,16 @@ class UserModel extends Model
     // protected $beforeDelete   = [];
     // protected $afterDelete    = [];
 
+    public function getUserWithEmployeeName($employee_id)
+    {
+        return $this->db->table('tbl_user AS u')
+                        ->select('u.username, p.nama')
+                        ->join('tbl_pegawai AS p', 'u.pegawai_id = p.id')
+                        ->where('u.pegawai_id', $employee_id)
+                        ->get()
+                        ->getRow(); // Fetch single row
+    }
+
 
     protected function hashPassword(array $data)
     {

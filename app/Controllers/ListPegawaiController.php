@@ -10,7 +10,7 @@ class ListPegawaiController extends BaseController
 
     public function __construct()
     {
-        $this->employeeModel = new EmployeeModel();
+        $this->model = new EmployeeModel();
         $this->helpers = ['form', 'url'];
         $this->session = session();
     }
@@ -26,9 +26,9 @@ class ListPegawaiController extends BaseController
             // $this->session->has('category') ? $this->session->remove('category') : '' ;
 
             $this->session->set('keyword', $keyword);
-            $employees = $this->employeeModel->search($keyword);
+            $employees = $this->model->search($keyword);
         } else {
-            $employees = $this->employeeModel;
+            $employees = $this->model;
         }
 
         // filter by kategori
@@ -38,9 +38,9 @@ class ListPegawaiController extends BaseController
         if(isset($category)){
 
             $this->session->set('category', $category);
-            $employees = $this->employeeModel->categories($category);
+            $employees = $this->model->categories($category);
         } else {
-            $employees = $this->employeeModel;
+            $employees = $this->model;
         }
         
 
@@ -50,7 +50,7 @@ class ListPegawaiController extends BaseController
 
         $data = [
             'data_pegawai' => $employees->paginate(10, 'employee'),
-            'pager' => $this->employeeModel->pager,
+            'pager' => $this->model->pager,
             'pageEmployee' => $pageEmployee
         ];
 
