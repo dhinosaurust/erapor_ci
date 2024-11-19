@@ -8,6 +8,13 @@
                 <?php
                     if(strpos($_SERVER['REQUEST_URI'], '/list-pegawai') === 0){
                         echo 'list pegawai';
+                    
+                    } elseif(strpos($_SERVER['REQUEST_URI'], '/kuisoner') === 0) {
+                        echo 'kuisoner';
+                    
+                    } elseif(strpos($_SERVER['REQUEST_URI'], '/hasil-penilaian') === 0) {
+                        echo 'hasil penilaian';
+
                     } else {
                         echo 'dashboard';
                     }

@@ -5,7 +5,7 @@
 <main id="content" class="container-fluid">
 
     <?php if (session()->getFlashdata('error')) : ?>
-        <?php echo view('components\template\attempt_login_not_success') ?>
+        <?= view('components/template/attempt_login_not_success') ?>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const modal = new bootstrap.Modal(document.getElementById('modalAttemptLogin'));
