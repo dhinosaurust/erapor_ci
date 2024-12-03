@@ -54,9 +54,9 @@ class ListPegawaiController extends BaseController
             'pageEmployee' => $pageEmployee
         ];
 
-        if (!$this->isLoggedIn()) {
-            return redirect()->to('/login');
-        }
+        // if (!$this->isLoggedIn()) {
+        //     return redirect()->to('/login');
+        // }
 
         return view('list_pegawai', $data);
     }

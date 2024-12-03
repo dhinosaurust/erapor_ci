@@ -13,7 +13,8 @@ $routes->add('/list-pegawai/clearFilter', 'ListPegawaiController::clearFilter');
 $routes->add('/list-pegawai/clearSearch', 'ListPegawaiController::clearSearch');
 
 $routes->add('/kuesioner', 'KuesionerController::index');
-$routes->add('/penilaian_kinerja', 'PenilaianKinerja::index');
+$routes->get('/form-bio', 'KuesionerController::surveyForm');
+$routes->get('/form-survey', 'KuesionerController::surveyForm');
 
 $routes->add('/hasil-penilaian', 'HasilPenilaianController::index');
 

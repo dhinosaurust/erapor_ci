@@ -4,6 +4,8 @@ const footerGkPenting = document.getElementById('gkPenting1');
 const listPegawai = document.getElementById('allDataEmployee');
 const currentYear = new Date().getFullYear();
 
+const windowX = window.matchMedia("(max-width: 970px)"); 
+
 
 async function getData(){
     const response = await fetch('data_pegawai.json');
@@ -45,12 +47,23 @@ async function showData(){
 
 // showData();
 
+if(windowX.matches){
+    sideNav.classList.add('sidebar-toggled');
+    sideNav.classList.remove('p-3')
+}
 
 btnSideNav.addEventListener('click', () => {
     sideNav.classList.toggle('sidebar-toggled');
     sideNav.classList.contains('sidebar-toggled') 
         ? sideNav.classList.remove('p-3') 
         : sideNav.classList.add('p-3');
+});
+
+const performanceForm = document.getElementById('penilaianKinerja');
+const behaviourForm = document.getElementById('penilaianPerilaku');
+
+performanceForm.addEventListener('click', () => {
+    window.location.href = "/form-bio"
 });
 
 footerGkPenting.textContent = currentYear;

@@ -12,11 +12,31 @@
 main nav{
     margin-top: 5rem;
 }
+.callout p{
+    font-size: 12pt;
+}
 .list-pegawai-tbl th,
 .list-pegawai-tbl td{
     padding-right: 2rem;
     padding-top: 1rem;
     padding-left: 1rem;
+}
+aside{
+    width: 140px;
+}
+aside ul{
+    justify-content: center;
+}
+aside li a{
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+aside li a span{
+    font-size: 14px !important;
+}
+aside li a i{
+    margin-bottom: .5rem;
 }
 aside,
 footer{
@@ -50,4 +70,86 @@ footer .row .list-group-item{
     /* border: solid 1px red; */
     display: flex;
     flex-direction: column;
+}
+.menu-kuisoner:hover{
+    cursor: pointer;
+    transform: translateY(-2.5%);
+    box-shadow: 0 5px 5px #ddd;
+    transition: .2s;
+}
+
+/* stepper */
+.stepper {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.line {
+    height: 2px;
+    flex: 1;
+    background-color: #007bff;
+    margin: 0 1rem;
+}
+.active .circle {
+    background-color: #5e5e5e;
+}
+.active + .line {
+    background-color: #5e5e5e;
+}
+#logo{
+    flex-direction: column;
+    align-items: center;
+}
+#logo p{
+    font-size: 12px;
+    margin-top: 1rem;
+}
+@media screen and (min-width: 700px){
+    .nav-item a i{
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    aside{
+        width: 280px;
+    }
+    aside ul{
+        justify-content: unset;
+        flex-direction: column;
+    }
+    aside li a{
+        flex-direction: row;
+        font-size: 1rem !important;
+        align-items: center;
+    }
+    aside li a span{
+        font-size: 1rem !important;
+    }
+    #logo{
+        flex-direction: row;
+    }
+    #logo p{
+        font-size: 1rem;
+        margin-top: 0;
+    }
 }

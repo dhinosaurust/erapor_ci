@@ -19,9 +19,9 @@ class HomeController extends BaseController
 
     public function index()
     {
-        if (!$this->isLoggedIn()) {
-            return redirect()->to('/login');
-        }
+        // if (!$this->isLoggedIn()) {
+        //     return redirect()->to('/login');
+        // }
 
         $data = [
             'title' => 'Selamat Datang di Dasbor E-Rapor Pemkot Surabaya',

@@ -8,8 +8,8 @@
     <?php echo $_SERVER['REQUEST_URI'] !== '/login' ? '<link rel="stylesheet" href="assets/css/style.css">' : '<link rel="stylesheet" href="assets/css/login.css">' ?>
     <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.min.css">
 </head>
-<body class="h-100">
-    <div class="d-flex vh-100">
+<body>
+    <div class="d-flex">
         <?php echo $_SERVER['REQUEST_URI'] !== '/login' ? view('components/template/sidebar__template') : '' ?>
         <div class="w-100 vh-100 <?= $_SERVER['REQUEST_URI'] !== '/login' ? 'overflow-auto' : '' ;?>">
             <?php echo $_SERVER['REQUEST_URI'] !== '/login' ? view('components/template/header__template') : '' ?>
